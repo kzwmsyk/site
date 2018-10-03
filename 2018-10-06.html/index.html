@@ -1,0 +1,2136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="outliner.js"></script><style type="text/css">
+                        
+                        body {
+                        -webkit-text-size-adjust:none;
+                        }
+			
+                        img.status {
+                        margin-left: 2px; margin-right: 2px; margin-top: 2px; height: 11px; width: 11px;
+                        }
+                        
+                        img.checkbox-column {
+                        height: 11px; width: 11px; vertical-align: top; margin-top: 3px;
+                        }
+                        
+                        img.leaf {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; margin-bottom: 3px; height: 6px; width 6px;
+                        }
+                        
+                        img.parent {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; height: 10px; width: 10px;
+                        }
+			
+			th {
+			vertical-align: bottom;
+			
+			}
+			
+			td {
+			vertical-align: top;
+			}
+			
+			td,th {
+			
+			empty-cells: show;
+			}
+			
+			.top-right-border {
+			
+			}
+			
+			.no-border {
+			border-bottom: 0px;
+			border-left: 0px;
+			}
+			
+			
+			
+			
+			table {
+			
+			font-family: Helvetica, sans-serif;
+			font-size: 12px;
+			font-family: "Helvetica Neue", sans-serif;  font-size: 13px;			
+			
+			}
+
+			
+			
+			.wholeDocument {
+			font-family: "Helvetica Neue", sans-serif;  font-size: 13px;background-color:rgb(255,255,255) ;  
+	
+			}
+		
+			
+			td.subcell {
+			border: none;
+			}
+			
+			td.content {
+			padding-left: 4px;
+			padding-bottom: 2px;
+			padding-top: 1px;
+			padding-right: 3px;
+			}
+			
+			.full {
+			height: 100%;
+			}
+			
+			.heighthack {
+                        
+                            height: 25px;
+                            
+			}
+			
+			div.titlepadding { 
+			padding-right:3px;
+			padding-left:6px;
+			padding-bottom:3px;
+			padding-top: 2px;
+			}
+			
+			
+					.summary_node {
+						background: rgba(0,0,0,.12);
+						margin-bottom: 1px;
+					}
+				
+			
+			div.column {   
+			padding-right: 3px;
+			padding-left: 4px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-right: 1px;
+			}
+			
+			.labelpadding {
+			padding-right: 3px;
+			padding-top: 1px;
+			padding-left: 2px;
+			}
+			
+			.indicator {
+			white-space: nowrap;
+			text-align:right;
+			margin-right: 0px;
+			vertical-align: top;
+			padding-top: 1px;
+			padding-left: 0px;
+			}
+			
+			.wholedocgutter {
+			
+			}
+			
+			div.row {
+			}
+			
+			div.headerRow {
+			}
+			
+			.expanded {
+			display: block;
+			}
+			.collapsed {
+			display: none;
+			}
+			
+            div.palette-hit-zone {
+                position: fixed;
+                bottom: 0px;
+				height: 33%;
+                left:50%;
+                width: 66%;
+                margin-left: -33%;
+            }
+
+			div.floating-palette {
+                -webkit-border-radius: 5px;
+                -webkit-transition: opacity is fade-in-out;
+                -webkit-transition-duration: 1s;
+				background-color: rgb(64, 64, 64);
+                opacity:0.7;
+				width: 88px;
+				height: 44px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -44px;
+			}
+            
+            div.palette-cell {
+                opacity:1;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+            }
+            
+            div.cell-divider {
+                position: absolute;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                margin-left: 44px;
+                height: 32px;
+                width:0px;
+                position:absolute;
+                left:0px;
+                border-right:rgb(207, 207, 207) 2px solid;
+            }
+			
+			
+			
+			
+			.note { 
+			padding-left: 5px;
+			padding-right: 3px; 
+			border: none; 
+			color:rgb(103,103,103) ;  
+			}
+                        
+                        .note-bg {
+                        
+                        }
+			
+			/* Total table width is 861
+			Adjusted table width is 912 */
+			
+			.wholething {
+				width: auto;
+			}
+			
+			
+			table.row {
+				
+						width: 861px;
+						
+			
+			}
+			
+			
+    .col_width1 { 
+        width: 861px;  /* Actual width is 861 */
+    }
+
+    .col1 { 
+        
+    }
+
+    .colbackground1 { 
+        
+    }
+
+			
+			/* Level Styles */
+			
+			
+    .columntitle { 
+        font-weight: 500;  
+    }
+
+    .level1 { 
+        color:rgb(50,50,50) ;  font-weight: 200;  font-size: 30px;
+    }
+
+    .levelcolor1 { 
+        
+    }
+
+    .levelguttercolor1 { 
+        
+    }
+
+    .level2 { 
+        color:rgb(50,50,50) ;  font-size: 18px;
+    }
+
+    .levelcolor2 { 
+        
+    }
+
+    .levelguttercolor2 { 
+        
+    }
+
+    .level3 { 
+        font-weight: 500;  
+    }
+
+    .levelcolor3 { 
+        
+    }
+
+    .levelguttercolor3 { 
+        
+    }
+
+    .ns-eUsXLp0Pv1g-Heading1 { 
+        color:rgb(50,50,50) ;  font-family: "Helvetica Neue", sans-serif;  font-weight: 200;  font-size: 30px;}
+
+    .ns-d4-frBYwy2X-Heading2 { 
+        color:rgb(50,50,50) ;  font-family: "Helvetica Neue", sans-serif;  font-size: 18px;}
+
+    .ns-kRw332h0q-G-Heading3 { 
+        font-family: "Helvetica Neue", sans-serif;  font-weight: 500;  font-size: 13px;}
+
+    .ns-nU7Pax9sHwm-HighlightYellow { 
+        }
+
+    .ns-m6c_M2fT6yP-HighlightRed { 
+        }
+
+    .ns-auoqZ5xVKeG-HighlightGreen { 
+        }
+
+    .ns-hE9mXgl4a8m-Purple { 
+        color:rgb(150,97,207) ;  }
+
+    .ns-l2kopvXC4ak-Blue { 
+        color:rgb(58,142,237) ;  }
+
+    .ns-f7F2187eZ56-Bondi { 
+        color:rgb(0,191,192) ;  }
+
+    .ns-kJhkVDl2Xsd-Green { 
+        color:rgb(103,187,53) ;  }
+
+    .ns-inNRQJ-da6E-Yellow { 
+        color:rgb(255,187,0) ;  }
+
+    .ns-nAm7imW-teW-Orange { 
+        color:rgb(255,144,77) ;  }
+
+    .ns-jtC-ndQ7Pcw-Red { 
+        color:rgb(242,96,119) ;  }
+
+    .ns-dI8s4BxgdIs-Graphite { 
+        color:rgb(107,124,165) ;  }
+
+    .ns-bg-eUsXLp0Pv1g-Heading1 { 
+        }
+
+    .ns-bg-d4-frBYwy2X-Heading2 { 
+        }
+
+    .ns-bg-kRw332h0q-G-Heading3 { 
+        }
+
+    .ns-bg-nU7Pax9sHwm-HighlightYellow { 
+        background-color:rgba(255,187,0,0.25) ;  }
+
+    .ns-bg-m6c_M2fT6yP-HighlightRed { 
+        background-color:rgba(242,96,119,0.25) ;  }
+
+    .ns-bg-auoqZ5xVKeG-HighlightGreen { 
+        background-color:rgba(103,187,53,0.25) ;  }
+
+    .ns-bg-hE9mXgl4a8m-Purple { 
+        }
+
+    .ns-bg-l2kopvXC4ak-Blue { 
+        }
+
+    .ns-bg-f7F2187eZ56-Bondi { 
+        }
+
+    .ns-bg-kJhkVDl2Xsd-Green { 
+        }
+
+    .ns-bg-inNRQJ-da6E-Yellow { 
+        }
+
+    .ns-bg-nAm7imW-teW-Orange { 
+        }
+
+    .ns-bg-jtC-ndQ7Pcw-Red { 
+        }
+
+    .ns-bg-dI8s4BxgdIs-Graphite { 
+        }
+
+    .ns-gutter-eUsXLp0Pv1g-Heading1 { 
+        }
+
+    .ns-gutter-d4-frBYwy2X-Heading2 { 
+        }
+
+    .ns-gutter-kRw332h0q-G-Heading3 { 
+        }
+
+    .ns-gutter-nU7Pax9sHwm-HighlightYellow { 
+        }
+
+    .ns-gutter-m6c_M2fT6yP-HighlightRed { 
+        }
+
+    .ns-gutter-auoqZ5xVKeG-HighlightGreen { 
+        }
+
+    .ns-gutter-hE9mXgl4a8m-Purple { 
+        }
+
+    .ns-gutter-l2kopvXC4ak-Blue { 
+        }
+
+    .ns-gutter-f7F2187eZ56-Bondi { 
+        }
+
+    .ns-gutter-kJhkVDl2Xsd-Green { 
+        }
+
+    .ns-gutter-inNRQJ-da6E-Yellow { 
+        }
+
+    .ns-gutter-nAm7imW-teW-Orange { 
+        }
+
+    .ns-gutter-jtC-ndQ7Pcw-Red { 
+        }
+
+    .ns-gutter-dI8s4BxgdIs-Graphite { 
+        }
+</style>
+</head>
+<body class="wholeDocument"><table cellspacing="0" cellpadding="0" class="top-right-border"><tr><td class="wholething no-border">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oH_yt0FVDuw"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('poH_yt0FVDuw', event.shiftKey)" id="ioH_yt0FVDuw" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">2018-10-06 中秋こざわ会<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="poH_yt0FVDuw" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oL9HlkAiv7o"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('poL9HlkAiv7o', event.shiftKey)" id="ioL9HlkAiv7o" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Show<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="poL9HlkAiv7o" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gnvMud-7EJL"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pgnvMud-7EJL', event.shiftKey)" id="ignvMud-7EJL" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">Part1<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgnvMud-7EJL" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="afutb3Et5EF"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">¥150 TRICK<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="baNqp2wI_L_"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Spotted Sorcery (Dr. Sack)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="e7NYZp5TELU"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Dice Inuterlude (Les Scheyer)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oeWdAVYANsy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Total Lineup (from “LINE UP” by Nick Trost)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="a6rWUzQf99R"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">underexposure (from “double exposure” by Asi Wind)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gZw2F5N5Zjz"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Coins a Glass<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nd62TFJVsyl"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">10 count assembly<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="emq4O8nrhNy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">octrix<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jyMKf2hGbWM"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">A Tale of ten Travellers<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eEWgGTnlDLT"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Old Maid’s Piano<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fqHZKrHxC2K"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Clueless (from “Clue” by Jack Yates)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="opHfjDX5YB9"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('popHfjDX5YB9', event.shiftKey)" id="iopHfjDX5YB9" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">Part2<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="popHfjDX5YB9" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bH5qF9E-DWj"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Ideal &amp; Reality Deck<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="m-bWZFJw80_"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">With or Without a Hole<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fbVNE20byuB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Hello World<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dQpqWGZy9ff"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">counterfeit<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="b7eBiNIEa7w"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Magician vs. Gambler vs. Mathematician<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kRKYej_-8x9"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Hide a Leaf<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lF9lR1ROAur"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">The Quintet of the Rings<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="aWhuv6jSJjV"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">The Loaded Dice Cup<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="l6wSltusH4n"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pl6wSltusH4n', event.shiftKey)" id="il6wSltusH4n" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">時間調整<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pl6wSltusH4n" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iAZfmRMOX3p"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Directed Verdict (John Bannon)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fn_FdGDrXI6"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Switching Sandwich (Michael Ammar)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eyzyZxbqZFg"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">The Strasbourg Waltz (Richard Vollmer)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="d1rnGzaqxvs"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Chess Match (Paul Brignall)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nKHSrnd7OsR"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">Oil King (from “The Konami Code” by Thomas Blomberg)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ifO7G5rRKkG"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('pifO7G5rRKkG', event.shiftKey)" id="iifO7G5rRKkG" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Lecture<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pifO7G5rRKkG" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nyoBcX1jH_N"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pnyoBcX1jH_N', event.shiftKey)" id="inyoBcX1jH_N" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">手品を作るべきか？<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pnyoBcX1jH_N" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bGQqOQ_f4UF"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">名作があるのに<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ati8SmMmuze"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">自分の手品をよくする<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jcV9V9AKTCV"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">名刺代わり<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iZaN-cmslEn"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('piZaN-cmslEn', event.shiftKey)" id="iiZaN-cmslEn" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">手品ノートを作る<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piZaN-cmslEn" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bqQT862CobZ"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">よい筆記用具<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="j2wUCJap8Ag"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">見た手品・覚えた手品<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hv-0uZ1n-hZ"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">やりたい手品<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oi1o_CcN3jA"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">思いついた手品<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="p8CwQMUJffy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">日付を書く<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="pEePAA6UC8q"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('ppEePAA6UC8q', event.shiftKey)" id="ipEePAA6UC8q" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">手品のつくりかた<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppEePAA6UC8q" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="llCpisPUTZz"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pllCpisPUTZz', event.shiftKey)" id="illCpisPUTZz" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">一目瞭然型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pllCpisPUTZz" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iRezIU7Vo3u"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">新しく何かを知って、すぐに自分なりの形を思いつく<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lWjWQBGvCR0"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('plWjWQBGvCR0', event.shiftKey)" id="ilWjWQBGvCR0" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">手順構成型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plWjWQBGvCR0" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gHRLUP_8Lfj"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pgHRLUP_8Lfj', event.shiftKey)" id="igHRLUP_8Lfj" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">一つの素材でたくさんの単発的な現象・ムーブ・技法があるものをまとめる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgHRLUP_8Lfj" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="g7Gy8TLFwlF"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pg7Gy8TLFwlF', event.shiftKey)" id="ig7Gy8TLFwlF" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">素材<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pg7Gy8TLFwlF" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="izGJwRWp9-I"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ステージマジック<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ePnV1ggfl7_"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">カップアンドボール<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mOFguyD0Hw6"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ポケットリング<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="f_3CMDyJns3"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">序盤・中盤・終盤<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eBRTz-f4nMC"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">考案することは少ない。知ったものをどう取捨選択し、配列するか<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="g-2uwdM-7bI"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pg-2uwdM-7bI', event.shiftKey)" id="ig-2uwdM-7bI" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">選択の連続こそがセンスや個性を形成する<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pg-2uwdM-7bI" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cnqysUnNlzA"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">どこに線を引くべきか選び取るのがセンス<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oLikt-lkS3C"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">その線が間違っていないことを指示するのが理論<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="punSEcwBNIB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">引くべき線を引けるようにするのが技術<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hqtEt8Gwcmb"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('phqtEt8Gwcmb', event.shiftKey)" id="ihqtEt8Gwcmb" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">問題解決型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="phqtEt8Gwcmb" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dypyHV61ksV"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pdypyHV61ksV', event.shiftKey)" id="idypyHV61ksV" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">プロブレム/プロット<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdypyHV61ksV" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="klgbxmcSyIy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pklgbxmcSyIy', event.shiftKey)" id="iklgbxmcSyIy" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">有名なもの<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pklgbxmcSyIy" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="otVihsjfBUc"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ホフジンザープロブレム<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mviiyrmscRg"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">51 Faces North (Open Prediction)<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="pVBW7oyL16K"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">バーグラスエフェクト (ACAAN)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gYH-Y64Rku4"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pgYH-Y64Rku4', event.shiftKey)" id="igYH-Y64Rku4" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">欠点<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgYH-Y64Rku4" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="isJNYApEKr0"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">あら探し<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cz23YQcX7lB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">「理想」を思い描く<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eQRrkm0K1KH"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('peQRrkm0K1KH', event.shiftKey)" id="ieQRrkm0K1KH" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">他の人の「解」を見て回る<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="peQRrkm0K1KH" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="n3-K4r1kr1v"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">Conjuror’s Archive<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="owHxPH1v_qh"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('powHxPH1v_qh', event.shiftKey)" id="iowHxPH1v_qh" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">文献蒐集≒洋書<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="powHxPH1v_qh" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lNAud7SVKsT"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">無理しなくてもよい<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oCzv6M-2pU9"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">重要文献を中心に<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bHiMWC4BWc0"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">そのうち自分のライブラリになる<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dHtS1RcCrTO"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pdHtS1RcCrTO', event.shiftKey)" id="idHtS1RcCrTO" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">ブレンド・よいとこどり<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdHtS1RcCrTO" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mMQ9_0jiHt5"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ソースが多ければ多いほど、配合比は独自に<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="muG0s3KT2Km"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ソースが一つだけだと劣化コピーになりがち<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="f4k-F601D0e"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">オリジナルブレンドをめざす<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kPDN5D9__lq"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pkPDN5D9__lq', event.shiftKey)" id="ikPDN5D9__lq" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">「原典」を辿る重要性<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkPDN5D9__lq" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eJ3_Wh-oJyg"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">まずなによりもリスペクト<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="opuoAkxdTJ6"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img onmousedown="ioSwitch('popuoAkxdTJ6', event.shiftKey)" id="iopuoAkxdTJ6" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">改案の筋の良し悪しもわかる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="popuoAkxdTJ6" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jJJPerAXwfK"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">差分を見る<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nov3UKPu6Jn"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">相異点に着目する<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dZvmiW8XP7J"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">狙いを読み解く<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nkxLE5t677w"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img onmousedown="ioSwitch('pnkxLE5t677w', event.shiftKey)" id="inkxLE5t677w" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">0-&gt;1でどこまで行けたのかがわかる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pnkxLE5t677w" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mUjzc4LTwPv"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">0-&gt;1を見て自分も0から1を作るのは難しい。<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="btJf1OP21su"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">1-&gt;1.1をみて、1.1-&gt;1.2や1-&gt;1.3を考えることは比較的簡単。訓練になる。<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="b_y3qsMNzST"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">0-&gt;0.7-&gt;1.3みたいなのもある。<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dGcvfqBghq1"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pdGcvfqBghq1', event.shiftKey)" id="idGcvfqBghq1" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">いじる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdGcvfqBghq1" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="a4Azi-TNi4I"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">抽象化・一般化<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="c-ODsbHd1ln"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">幅優先と深さ優先<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="j3HcK-KTXJq"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">TRIZ<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bK8Hl9lW-8Z"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">パラメータ変更<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jglZp00PFSZ"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">トレードオフを知る<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="grOQN8G89w8"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「手法」をストックする<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="psUsVGLWugN"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">狙いを定める<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dFY7tb0iGS8"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「勉強」との親和性<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="caYRns-U_2S"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">正解はいくつもあり、明確な間違いは少ない<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dfnWkDLXDee"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pdfnWkDLXDee', event.shiftKey)" id="idfnWkDLXDee" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">現象先行型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdfnWkDLXDee" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="i3RJPfPl9QZ"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">あんなこといいなできたらいいな<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hoy1Tp8aHBp"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">欲望を奇術にする<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="g9PN8pbcEOR"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「手法」のストックはここでも重要に<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="crae6DWVpFt"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pcrae6DWVpFt', event.shiftKey)" id="icrae6DWVpFt" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">手法先行型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pcrae6DWVpFt" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jfXpQC0GlXs"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">原理<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="pfuKwwj0YKB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">技法・ハンドリング<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="l_WRx6ptJzW"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">面白いプレゼンテーションを被せる<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="aVaUeaj6NuM"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('paVaUeaj6NuM', event.shiftKey)" id="iaVaUeaj6NuM" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">概念輸入型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="paVaUeaj6NuM" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="pXOebXZyI6x"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「おもしろいな」「不思議だな」と思った手品ではないものを「手品にできないか」<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="aiBtjyBNjCx"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('paiBtjyBNjCx', event.shiftKey)" id="iaiBtjyBNjCx" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">ひらめき型<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="paiBtjyBNjCx" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lR9v0G98CZT"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">頭の隅に「問題として」抱えておくことが大事<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fPFxglj1IGC"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「できたらいいな」はメモしておく<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="l3s-h17jdp6"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pl3s-h17jdp6', event.shiftKey)" id="il3s-h17jdp6" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">セルフワーキングへの回帰<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pl3s-h17jdp6" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gTFyznFXEpX"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pgTFyznFXEpX', event.shiftKey)" id="igTFyznFXEpX" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">「初心者向けの簡単な手品」ではない。実は難しい。<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgTFyznFXEpX" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cKWCeqYhFYU"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">盛り上がらない→盛り上げる技術が必要<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lF8vDsgF7Oo"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">謎の手続きを要求する→不自然に感じさせない技術<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hwfa7suXmcP"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">見破られやすい→逃げ切る技術<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="o13enYZYfvE"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">技法を使う方が簡単なのでは？<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="obJgLaO_2WM"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pobJgLaO_2WM', event.shiftKey)" id="iobJgLaO_2WM" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">人に手品を教える<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pobJgLaO_2WM" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mXg37xa2v5R"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">技法使わない縛り<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lCwRLGUTv7E"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">簡単かつ効果的な良い手品<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="micS1oHpDCW"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">必ずしも難しい手品の方が簡単でわかりやすいわけでもない<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lL7clRl_rba"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('plL7clRl_rba', event.shiftKey)" id="ilL7clRl_rba" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">不思議さの追求<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plL7clRl_rba" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hP-5uqdBOhi"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">何かをすると（マジシャンには）「見える」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nATE511CVp6"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pnATE511CVp6', event.shiftKey)" id="inATE511CVp6" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">（目の前では）何もやらないのが最強理論<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pnATE511CVp6" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fcR96fIbjq_"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">原理<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lATMz5NE9sF"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">セットアップ<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dvpU9P5p38T"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">アウト<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hnCM_Y3QUUU"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('phnCM_Y3QUUU', event.shiftKey)" id="ihnCM_Y3QUUU" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">必ずしもselfでworkさせることにこだわらない<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="phnCM_Y3QUUU" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nY-htQhCx0D"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">技法を完全には排除しない<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="chir40qHopZ"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">semi-automaticやsemi-selfworkingの世界<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="l0BUyThH0sh"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">どこまで「準」かは人次第<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="d8TlPyx35Rc"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">技法は上手い人多いですし<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kZnqEF-lniy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pkZnqEF-lniy', event.shiftKey)" id="ikZnqEF-lniy" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">原理・数理への深い理解<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkZnqEF-lniy" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mIXEnuRVmYr"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">＋「観客の初期条件に対する知識」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="d1D0ACZa-sI"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">＋「眼前で行われている事への理解」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="g34aT3jBmQM"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">ー「隠された原理」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iAUa1qkKTTl"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">ー「見せてないもの」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="pkir-ck6y7_"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">＝不思議<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kMQZBOGCBm7"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pkMQZBOGCBm7', event.shiftKey)" id="ikMQZBOGCBm7" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">数理臭・手続き臭の消し方<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkMQZBOGCBm7" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mtzyNmRc5vl"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">サーストン三原則「何をやるかを説明しない」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jhaJCg7ru0P"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pjhaJCg7ru0P', event.shiftKey)" id="ijhaJCg7ru0P" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">理由のある見せ方<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pjhaJCg7ru0P" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mipGa1aGraW"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">演出<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oTbkKBiwrJY"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">モチーフ<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fHhmemHIHm9"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pfHhmemHIHm9', event.shiftKey)" id="ifHhmemHIHm9" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">計数の除去<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfHhmemHIHm9" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dIKqxHDbJ3M"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">二倍する→もう一回やってください/わたしが見本を見せます<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nFeFLcCTllO"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">逆順→一枚ずつ配る<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dK8Jq-AiJGv"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">二等分→半分取ります<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hYb2ta6_HsD"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('phYb2ta6_HsD', event.shiftKey)" id="ihYb2ta6_HsD" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">モチーフの重要性<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="phYb2ta6_HsD" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nmQw-kEq285"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pnmQw-kEq285', event.shiftKey)" id="inmQw-kEq285" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">モチーフ＝モチベーション・動機<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pnmQw-kEq285" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fGeolhZSwSj"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pfGeolhZSwSj', event.shiftKey)" id="ifGeolhZSwSj" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">怪しい変な道具<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfGeolhZSwSj" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="k15oiLgwjhi"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">左利き用のコイン<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eK2blt3zthg"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">コインボックス<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jyQ6a6vJwXd"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pjyQ6a6vJwXd', event.shiftKey)" id="ijyQ6a6vJwXd" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">シチュエーション<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pjyQ6a6vJwXd" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gBI7VhSRB-9"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">観客が予言を完成させる<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="arLxLHNaCvk"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">選ぶ前から選ばれている<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ahLwCnFSAxM"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pahLwCnFSAxM', event.shiftKey)" id="iahLwCnFSAxM" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">お隣のジャンル<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pahLwCnFSAxM" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ikpcBhaiqMk"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">パズル<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kkMFyVemfEH"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pkkMFyVemfEH', event.shiftKey)" id="ikkMFyVemfEH" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">SF<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkkMFyVemfEH" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oZu5b1EvOgG"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">タイムトラベル物<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oj1vxJFTF7G"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ドラえもん　ひみつ道具<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="haqiVwV4oQU"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('phaqiVwV4oQU', event.shiftKey)" id="ihaqiVwV4oQU" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">ミステリ<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="phaqiVwV4oQU" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="n4bVoLgBdoS"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img onmousedown="ioSwitch('pn4bVoLgBdoS', event.shiftKey)" id="in4bVoLgBdoS" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">謎が駆動する<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pn4bVoLgBdoS" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fmscMFDbp35"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">ミステリ＝謎が駆動する物語<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ht0mi-YJp9J"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor8"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level8 levelguttercolor8" style="width: 121px;"></td>
+<td class=" subcell wholedocgutter indicator level8 levelguttercolor8" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level8 levelguttercolor8" style=" width: 1px; "></td>
+<td class=" content level8 subcell">奇術＝謎や奇妙な物が駆動する芸能<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iaj92ajOKKW"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('piaj92ajOKKW', event.shiftKey)" id="iiaj92ajOKKW" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">ゲーム・勝負・試合<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piaj92ajOKKW" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cu02RGBZWiZ"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">ババ抜き<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="pckWqDL234k"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('ppckWqDL234k', event.shiftKey)" id="ipckWqDL234k" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">言語<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppckWqDL234k" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="elG0SXmtzTx"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">ことわざ・慣用句<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hDbRTnHRZ0U"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">落語・マザーグース<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="n_oI4ujuJ4u"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pn_oI4ujuJ4u', event.shiftKey)" id="in_oI4ujuJ4u" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">興味を牽引する<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pn_oI4ujuJ4u" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="b6oclHKw2sR"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">必然性を与える<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ex4IPH_ribF"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">手品はパズルでもミステリでも勝負でもない<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="jWdnlPpPwQy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">が、その皮を被せると、興味を引っ張り、面白くなる<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="excEiPDwHIX"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">本当には解かせない、勝負しない・させないことが大事<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lUgIm2kTZIf"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('plUgIm2kTZIf', event.shiftKey)" id="ilUgIm2kTZIf" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">モチーフからプロットを形成できる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plUgIm2kTZIf" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dmMxiSiLZBB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">それを問題解決すると、オリジナルのできあがり<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hx6-uum7I_I"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">演じるとこなれてくる<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ltNi_TU5ft5"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pltNi_TU5ft5', event.shiftKey)" id="iltNi_TU5ft5" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">演出について<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pltNi_TU5ft5" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="f3oU8sMockA"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pf3oU8sMockA', event.shiftKey)" id="if3oU8sMockA" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">「演出」があるジャンル<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pf3oU8sMockA" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="chJo3bRT_yG"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">演劇<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fHn_v0HGNE4"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">映画・TVドラマ<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="coysFaC88SE"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">アニメ<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lBOmcnWuO1R"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">音楽コンサート<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="phDju__ULZA"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pphDju__ULZA', event.shiftKey)" id="iphDju__ULZA" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">それぞれやってることが異なる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pphDju__ULZA" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="elN4x-ulZhK"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">監督directionの言い換えである場合も<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="i2QaZYDVyEB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pi2QaZYDVyEB', event.shiftKey)" id="ii2QaZYDVyEB" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">表現を統括し「方向性を与え調和を図る」<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pi2QaZYDVyEB" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="m_52zzv-Dq-"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">鈴木徹さんとか？<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fcRR_eTawXg"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">FISMレベルのステージアクトにはありそう<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cZETwEBpCEq"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">台本を元に演技・装置・照明・音響を…<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cGqf6uuTr-w"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">「効果を狙って物事の運営・進行に工夫を巡らす」←クロースアップはこちらか<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bA4AFO3cVoD"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">手品における「演出」＝presentationの訳語<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bSUgSZz6u4i"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pbSUgSZz6u4i', event.shiftKey)" id="ibSUgSZz6u4i" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">「効果をあげるための見せ方の工夫」＝面白い見せ方<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pbSUgSZz6u4i" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mZYLuZi5iib"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">プロット<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oz7V3neDH_V"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">ストーリーテリング<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dU4TNriR054"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">現象の変更<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="imOAQikjL1j"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">見立て<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dPReaW3VxQ7"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">どんでん返し<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ffan6X9HOyl"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">サカー<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="cAovvbhg4yq"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">小道具<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="driF5OmKv_X"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">被害者<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="m6x7qmj7Bcz"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">品の良さ<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="n9MQBhamzuy"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">etc.<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gqb-eCaZL1H"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">手品の根幹（＝秘密・タネ）は変えずに、目に触れる層（うわべ）を変え、手を入れる行為<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="avbRMuOqYLH"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pavbRMuOqYLH', event.shiftKey)" id="iavbRMuOqYLH" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">セルフワーキング（or 生の数理的原理）<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pavbRMuOqYLH" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ikABBBxVLSi"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">多くは良質の「演出」を必要とする。<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kkleh2Uqw8v"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「この手品は見せ方次第である」<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="p9U4mS_DBS5"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">観客の興味を惹く<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dme_2GiwuMM"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">不自然・不必要と思われる部分に必然性を与える<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mdvghazI60V"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pmdvghazI60V', event.shiftKey)" id="imdvghazI60V" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">演出：「不思議＝わからない」に対して、「味わい」を付与しやすい<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pmdvghazI60V" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="l33ld3BGZyH"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">味わいの違いが、たくさんの手品がある理由とも言える<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="lwv4dqoFh4g"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">たくさんの手品師がいる理由でもある。<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eDyts-sV9ZL"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">「味わい」だけを見せるようになる本末転倒も<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="oV8JSLa8nVS"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('poV8JSLa8nVS', event.shiftKey)" id="ioV8JSLa8nVS" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">単純に工夫したりアイデアを足していくのは楽しい<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="poV8JSLa8nVS" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eZPQWAo83DT"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">オリジナリティーにも繋がる<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="duH1aoBuVV5"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pduH1aoBuVV5', event.shiftKey)" id="iduH1aoBuVV5" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">アマチュアとしての商業的でない繊細な演技<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pduH1aoBuVV5" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kem9rhJ9r0C"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pkem9rhJ9r0C', event.shiftKey)" id="ikem9rhJ9r0C" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level4 levelguttercolor4" style=" width: 1px; "></td>
+<td class=" content level4 subcell">アマチュアは普段の自分を知る人に手品を見せる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkem9rhJ9r0C" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fRQS_Xj2PD1"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pfRQS_Xj2PD1', event.shiftKey)" id="ifRQS_Xj2PD1" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">普段との連続性が大事<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfRQS_Xj2PD1" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hESmbkN2Ct0"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">急に敬語にならない<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="psktO_atwCX"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">会話タイムと手品タイムでのテンションの連続性<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="eL1OuhDju7o"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('peL1OuhDju7o', event.shiftKey)" id="ieL1OuhDju7o" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">実演回数は大事<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="peL1OuhDju7o" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="bDBhm8oEqjA"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">たくさん失敗しましょう<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dy8ZSHOTM3O"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">手品を見せること<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iw2XAzzyQ4l"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('piw2XAzzyQ4l', event.shiftKey)" id="iiw2XAzzyQ4l" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">台本は一回書いて忘れる<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piw2XAzzyQ4l" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="hFGMyYhRRqI"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">奇術自体が持つ構造に身を任せるのが大事<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iz59VCV1V8F"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('piz59VCV1V8F', event.shiftKey)" id="iiz59VCV1V8F" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">何を口にするべきか必然性がある<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piz59VCV1V8F" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="exbjaSafOMB"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">そうでないポイントは覚える<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gYuOB8TsoRK"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">何をどのタイミングで言うべきか<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="ntyZ_pu69lm"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pntyZ_pu69lm', event.shiftKey)" id="intyZ_pu69lm" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">推敲は重要<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pntyZ_pu69lm" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gHAwfY3TGyc"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">手順自体をよくする場合が多い<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="f9se4Kke5Ot"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor5"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+<td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img onmousedown="ioSwitch('pf9se4Kke5Ot', event.shiftKey)" id="if9se4Kke5Ot" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level5 levelguttercolor5" style=" width: 1px; "></td>
+<td class=" content level5 subcell">手品以外の面白いものにアンテナを張る<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pf9se4Kke5Ot" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="m_jOGVhaPOE"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">手品が好きなうちは手品を追いかければ十分<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="aN8y3PgPXNr"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">物足りなくなったときに<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="fcd_wSEEzbH"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor6"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level6 levelguttercolor6" style="width: 89px;"></td>
+<td class=" subcell wholedocgutter indicator level6 levelguttercolor6" style="width: 15px;"><img onmousedown="ioSwitch('pfcd_wSEEzbH', event.shiftKey)" id="ifcd_wSEEzbH" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level6 levelguttercolor6" style=" width: 1px; "></td>
+<td class=" content level6 subcell">いろんな本を読む<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfcd_wSEEzbH" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="iAeG76phpkW"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor7"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level7 levelguttercolor7" style="width: 105px;"></td>
+<td class=" subcell wholedocgutter indicator level7 levelguttercolor7" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level7 levelguttercolor7" style=" width: 1px; "></td>
+<td class=" content level7 subcell">読む…<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td></tr></table></body>
+</html>
